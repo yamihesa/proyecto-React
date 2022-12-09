@@ -1,21 +1,23 @@
-import React from 'react';
-import './index.css';
-import '../src/components/NavBar/navBar.css'
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
-import 'boxicons' 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './index.css'
+import NavBar from './components/NavBar/NavBar';
+import Home from './routes/Home/Home';
+import Products from './routes/Products/Products';
+import ProductById from './routes/ProductById/ProductById';
+import 'boxicons'
+
 
 function App() {
   return (
-    <div className="App">
-      <NavBar/>        
-      
-      <ItemListContainer
-      titulo='Bienvenidos a Coherencia Cuántica' 
-      subtitulo='Talleres de Terapias Alternativas'/>
-      
-    </div>
+    <BrowserRouter className="App">
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/product/:id' element={<ProductById />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

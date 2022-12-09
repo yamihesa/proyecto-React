@@ -24,3 +24,17 @@ code {
   padding: 0 15px;
   box-sizing: border-box;
 }
+
+.saludo{
+  margin-top: 5rem;
+  font-size: 4rem;
+  color: purple;
+  text-align: center;
+  font-family: cursive;
+}
+.saludo1{
+  font-size: 2rem;
+  color: purple;
+  text-align: center;
+  font-family: cursive;
+}

@@ -1,0 +1,30 @@
+.item-count {
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
+  }
+button {
+    display: block;
+    width: 5rem;
+    height: 1.5rem;
+    background-color: rgb(155, 65, 153);
+    border: none;
+    border-radius: .2rem;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+
+.item-count input{
+    width: 3rem;
+    text-align: center;
+    border: none;
+  
+}
+
+.item-count .onClick{
+  background-color: rgb(155, 65, 153);
+  border: none;
+  width: 2rem;
+}

@@ -1,16 +1,32 @@
-import React from 'react'
-import './ItemList.css'
+import { useEffect, useState } from "react";
+import products  from "../../data/products";
+import ItemList from "../ItemList/ItemList"; 
+import  ItemFilter from "../ItemFilter/ItemFilter";
+import "./Itemlistcontainer.css";
 
-const ItemListContainer = (greeting) => {
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+  
+  useEffect(() => {
+    const promise = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(products);
+      }, 2000);
+    });
+    
+    promise.then((product) => {
+      setItems(product);
+    });
+  }, []);
+
   return (
-      <div>
-
-        <p className='titulo'>"{greeting.titulo}"</p>     
-        <h2 className='subtitulo'>{greeting.subtitulo}</h2>
-            
-      </div>
+    <div className="item-list-container">
+        
+    <ItemFilter items={items} />
+      
+    <ItemList items={items} />
+    </div>
   );
-};
-
+  }
 
 export default ItemListContainer
