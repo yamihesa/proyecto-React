@@ -21,10 +21,10 @@
     border: 6px solid transparent;
     border-radius: 5px;
 }
-.detail_info:hover{
+.detail_item:hover{
     border: 2px solid  purple;
 }
-.detail_info h1{
+.detail_item h1{
     margin-top: -1rem;
 }
 .detail_button{
