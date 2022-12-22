@@ -23,7 +23,7 @@
 	transition: transform 1s;
 }
 
-ul a{
+ul .nav_link{
     color: whitesmoke;
     text-decoration: none;
     text-transform: uppercase;
@@ -31,7 +31,7 @@ ul a{
     background-color: rgb(177, 114, 177);
     border-radius: 1rem;
 }
-a:hover{
+.nav_link:hover{
     color: lightgrey;
     
 }
@@ -50,6 +50,6 @@ li:hover{
 .nav_bar ul li{
     padding: 0 1rem;
 }
-.nav_bar ul li a{
+.nav_bar ul li .nav_link{
     font-weight: 700;
 }

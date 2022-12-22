@@ -3,13 +3,18 @@
     cursor: pointer;
     position: relative;
     border: solid rgb(177, 114, 177);
-    border-radius: .5rem;
-}
-.cart box-icon{
+    border-radius: 2rem;
     width: 2.5rem;
-    height: 3rem;
+    height: 1.8rem;
 }
-.cart span{
+.icon{
+ 
+ width: 2rem;
+ height: 2rem;
+ 
+}
+
+.item_total{
     position: absolute;
     top: -1rem;
     right: -1rem;
@@ -27,5 +32,3 @@
 }
 
 
-
-  

@@ -1,23 +1,24 @@
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.css'
+import './App.css';
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
-import Home from './routes/Home/Home';
-import Products from './routes/Products/Products';
-import ProductById from './routes/ProductById/ProductById';
-import 'boxicons'
-
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Home from './routes/Home/Home'
 
 function App() {
   return (
-    <BrowserRouter className="App">
-      <NavBar />
+    <div className="App">
+      <BrowserRouter>
+      <NavBar/>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/product/:id' element={<ProductById />} />
-      </Routes>
-    </BrowserRouter>
+        <Route path={'Inicio'} element={<Home/>}/>
+        <Route path={'/'} element={<ItemListContainer/>}/>
+        <Route path={'/category/:category'} element={<ItemListContainer/>}/>
+        <Route path={'/item/:id'} element={<ItemDetailContainer/>}/>
+      </Routes>  
+      </BrowserRouter>
+   
+    </div>
   );
 }
 

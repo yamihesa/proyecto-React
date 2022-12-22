@@ -1,38 +1,34 @@
-import "./navbar.css";
-import { Link } from "react-router-dom";
-import CartWidget from "../CartWidget/CartWidget";
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
+import './NavBar.css'
 import Logo from '../../Imagenes/Logo.png'
 
 const NavBar = () => {
-  return (
-    <div className="nav_bar">        
-        <div className='logo'><Link to='/'>
-            <img src={Logo} className='logo_img' alt=''/>
-            </Link>
-        </div>
-      
-      <ul>
-        <li>
-          <Link to="/Inicio">Inicio</Link>
-        </li>
-        <li>
-          <Link to="/Talleres">Talleres</Link>
-        </li>
-        <li>
-          <Link to="/Terapias">Terapias</Link>
-        </li>
-        <li>
-          <Link to="/Products">Productos</Link>
-        </li>
-        <li>
-          <Link to="/Contacto">Contacto</Link>
-        </li>
-      </ul>
-      <div className="navbar-cart">
+  return <div className="nav_bar">
+    <Link to={'/Inicio'}>
+      <img src={Logo} className='logo_img' alt=''/>
+    </Link>
+      <div className="nav_bar_ul">
+        <ul>
+          <li>
+            <NavLink className="nav_link"  to={'/category/Varios'}>Varios</NavLink>
+          </li>
+          <li>
+            <NavLink  className="nav_link" to={'/category/Lamparas'}>Lamparas</NavLink>  
+          </li>
+          <li>
+            <NavLink  className="nav_link"  to={'/category/Fuentes'}>Fuentes</NavLink>                       
+          </li>
+        </ul>
+      </div>
         <CartWidget />
       </div>
-    </div>
-  );
-};
+    
+
+        
+    
+}
+
 
 export default NavBar;
