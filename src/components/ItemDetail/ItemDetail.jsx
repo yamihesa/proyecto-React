@@ -9,7 +9,6 @@ const ItemDetail = ({listProducts}) => {
         <img src={listProducts.img} alt={listProducts.name} className='detail_img' />
         <h1>{listProducts.name}</h1>
         <p><b>${listProducts.price}</b></p>
-        <p>{listProducts.specs}</p>
         <ItemCount stock={10} initial={0} />
         <button className='detail_button'>Comprar</button>
       </div>  
